@@ -1,0 +1,30 @@
+Source: golang-github-hashicorp-go-immutable-radix
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Tim Potter <tpot@hpe.com>,
+           Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any,
+               golang-github-hashicorp-golang-lru-dev (>= 0.0~git20160207~),
+               golang-github-hashicorp-uuid-dev
+Standards-Version: 4.0.0
+Homepage: https://github.com/hashicorp/go-immutable-radix
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-hashicorp-go-immutable-radix.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-hashicorp-go-immutable-radix.git
+XS-Go-Import-Path: github.com/hashicorp/go-immutable-radix
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-hashicorp-go-immutable-radix-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-github-hashicorp-golang-lru-dev (>= 0.0~git20160207~),
+         golang-github-hashicorp-uuid-dev
+Description: immutable radix tree implementation in Golang
+ Golang implementation of an immutable radix tree
+ (http://en.wikipedia.org/wiki/Radix_tree).
+ The package only provides a single Tree implementation, optimized for
+ sparse nodes.
